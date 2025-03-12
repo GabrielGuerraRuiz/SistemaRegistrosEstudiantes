@@ -1,2 +1,2 @@
-# SistemaRegistrosEstudiantes
+# Sistema Registros Estudiantes
 
