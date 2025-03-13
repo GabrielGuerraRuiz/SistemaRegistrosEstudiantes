@@ -16,7 +16,9 @@ La práctica reforzará conocimientos en estructuras de control, manejo de arreg
 4. Eliminar un estudiante de la lista.
 5. Salir del programa.
 
-# Menú
+## Menú
+En está parte se muestra la realización del menú junto a sus opciones.
+
 ```sh
 System.out.println("\n--- Sistema de Registro de Estudiantes ---");
             System.out.println("1. Registrar estudiante");
@@ -27,4 +29,14 @@ System.out.println("\n--- Sistema de Registro de Estudiantes ---");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el buffer
+```
+
+
+```sh
+public class SistemaRegistroEstudiantes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Estudiante[] estudiantes = new Estudiante[100];
+        int numEstudiantes=0, opcion;
+        String nombre, matricula, carrera;
 ```
