@@ -1,6 +1,7 @@
 # Sistema Registros Estudiantes
 ## Indice
-1. 
+1. [Descripción del proyecto](#descripcion_del_proyecto)
+2. 
 
 
 
@@ -15,5 +16,15 @@ La práctica reforzará conocimientos en estructuras de control, manejo de arreg
 4. Eliminar un estudiante de la lista.
 5. Salir del programa.
 
-
-
+# Menú
+```sh
+System.out.println("\n--- Sistema de Registro de Estudiantes ---");
+            System.out.println("1. Registrar estudiante");
+            System.out.println("2. Mostrar estudiantes");
+            System.out.println("3. Buscar estudiante por matrícula");
+            System.out.println("4. Eliminar estudiante");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+```
