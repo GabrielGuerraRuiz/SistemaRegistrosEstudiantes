@@ -34,16 +34,88 @@ System.out.println("\n--- Sistema de Registro de Estudiantes ---");
             scanner.nextLine(); // Limpiar el buffer
 ```
 
-Este código define un arreglo para almacenar hasta 100 estudiantes, las variables para contar el número de estudiantes `numEstudiantes` y para capturar datos como nombre, matrícula y carrera. Se usa un `Scanner` para leer datos del usuario en la consola.
-
-```sh
-public class SistemaRegistroEstudiantes {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Estudiante[] estudiantes = new Estudiante[100];
-        int numEstudiantes=0, opcion;
-        String nombre, matricula, carrera;
+### **Clase `Estudiante`**
+```java
+class Estudiante {
+    String nombre;
+    int edad;
+    String matricula;
+    String carrera;
+}
 ```
+Esta clase representa a un estudiante con cuatro atributos esenciales:
+- `nombre`: Nombre completo del estudiante.
+- `edad`: Edad del estudiante.
+- `matricula`: Número de matrícula que identifica al estudiante.
+- `carrera`: Carrera en la que está inscrito.
+
+### **Método `mostrarEstudiantes`**
+```java
+public static void mostrarEstudiantes(Estudiante[] estudiantes) {
+    for (Estudiante estudiante : estudiantes) {
+        if (estudiante != null) {
+            System.out.println("Nombre: " + estudiante.nombre);
+            System.out.println("Edad: " + estudiante.edad);
+            System.out.println("Matrícula: " + estudiante.matricula);
+            System.out.println("Carrera: " + estudiante.carrera);
+            System.out.println("--------------------------");
+        }
+    }
+}
+```
+Este método recorre el arreglo de estudiantes e imprime la información de cada uno. Además, omite los valores `null` para evitar errores en la ejecución.
+
+### **Método `eliminarEstudiante`**
+```java
+public static int eliminarEstudiante(Estudiante[] estudiantes, int numEstudiantes, String matricula) {
+    for (int i = 0; i < numEstudiantes; i++) {
+        if (estudiantes[i].matricula.equals(matricula)) {
+            for (int j = i; j < numEstudiantes - 1; j++) {
+                estudiantes[j] = estudiantes[j + 1];
+            }
+            estudiantes[numEstudiantes - 1] = null;
+            System.out.println("Estudiante eliminado exitosamente.");
+            return numEstudiantes - 1;
+        }
+    }
+    System.out.println("No se encontró ningún estudiante con esa matrícula.");
+    return numEstudiantes;
+}
+```
+Este método busca a un estudiante por su matrícula y lo elimina del arreglo, reorganizando los elementos restantes para mantener la integridad de la lista.
+
+### **Búsqueda de Estudiante por Matrícula**
+```java
+System.out.print("Ingrese la matrícula del estudiante: ");
+matricula = scanner.nextLine();
+boolean encontrado = false;
+for (int i = 0; i < numEstudiantes; i++) {
+    if (estudiantes[i] != null && estudiantes[i].matricula.equals(matricula)) {
+        System.out.println("Nombre: " + estudiantes[i].nombre);
+        System.out.println("Edad: " + estudiantes[i].edad);
+        System.out.println("Carrera: " + estudiantes[i].carrera);
+        encontrado = true;
+        break;
+    }
+}
+if (!encontrado) {
+    System.out.println("No se encontró ningún estudiante con esa matrícula.");
+}
+```
+En este bloque de código:
+1. Se solicita al usuario ingresar la matrícula del estudiante a buscar.
+2. Se recorre la lista de estudiantes evitando valores `null`.
+3. Se compara la matrícula ingresada con las matrículas almacenadas.
+4. Si hay coincidencia, se muestran los datos del estudiante.
+5. Si no se encuentra, se notifica al usuario.
+
+Este código permite gestionar registros de estudiantes de manera eficiente dentro del sistema.
+
+
+
+
+
+
 
 # Instrucciones para compilar y ejecutar el programa
 Para compilar el programa, utiliza el siguiente comando:
