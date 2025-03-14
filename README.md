@@ -56,7 +56,7 @@ Para compilar el programa, utiliza el siguiente comando:
    - Esto generará un archivo `SistemaRegistroEstudiantes.class` en el mismo directorio si el código no tiene errores.
 
  **Ejecutar**:
-  <br> - Una vez compilado, ejecuta el archivo `.class` con el comando `java` (sin la extensión `.class`):</br>
+   - Una vez compilado, ejecuta el archivo `.class` con el comando `java` (sin la extensión `.class`):<br>
      ```
      java SistemaRegistroEstudiante
      ```
