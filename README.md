@@ -44,3 +44,12 @@ public class SistemaRegistroEstudiantes {
         int numEstudiantes=0, opcion;
         String nombre, matricula, carrera;
 ```
+
+# Instrucciones para compilar y ejecutar el programa
+
+
+# Capturas de pantalla del programa en funcionamiento
+
+
+# Enlace al repositorio de GitHub 
+
