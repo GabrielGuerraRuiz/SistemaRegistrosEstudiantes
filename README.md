@@ -152,6 +152,10 @@ Para compilar el programa, utiliza el siguiente comando:
 
 
 # Capturas de pantalla del programa en funcionamiento
+![Mostrar_estudiantes](https://github.com/user-attachments/assets/e53b9e9b-3f2b-4be3-97f1-d52d9029f683)
+![Buscar_estudiantes](https://github.com/user-attachments/assets/65924adc-8fe2-403b-a162-ea7732ffa304)
+![Opcion_para_salir](https://github.com/user-attachments/assets/f50642cc-ea43-43a1-8f18-8cf9fd45d57e)
+![Eliminar_estudiantes](https://github.com/user-attachments/assets/95ae48a3-852d-40ad-9274-a9efe1cf6edf)
 
 
 # Enlace al repositorio de GitHub 
