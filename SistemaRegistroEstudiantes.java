@@ -22,7 +22,7 @@ public class SistemaRegistroEstudiantes {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Estudiante[] estudiantes = new Estudiante[100];
-        int numEstudiantes=0, opcion;
+        int numEstudiantes=0, opcion, encontrado;
         String nombre, matricula, carrera;
 
         do {
@@ -47,6 +47,21 @@ public class SistemaRegistroEstudiantes {
 
                 case 3:
                     // Buscar estudiante por matrícula
+                    System.out.print("Ingrese la matricula del estudiante: ");
+                    matricula = scanner.nextLine();
+                    encontrado=0;
+                    for (int i=0; i<numEstudiantes; i++) {
+                        if (estudiantes[i].matricula.equals(matricula)) {
+                            System.out.println("Nombre: " + estudiantes[i].nombre);
+                            System.out.println("Edad: " + estudiantes[i].edad);
+                            System.out.println("Carrera: " + estudiantes[i].carrera);
+                            encontrado=1;
+                            break;
+                        }
+                    }
+                    if (encontrado==0) {
+                        System.out.println("No se encontro ningun estudiante con esa matricula.");
+                    }
                     break;
 
                 case 4:
