@@ -49,7 +49,7 @@ public class SistemaRegistroEstudiantes {
 Para compilar el programa, utiliza el siguiente comando:
 
  **Compilar**:
-  <br> - Usa el comando `javac` para compilar. Ejemplo:</br>
+   - Usa el comando `javac` para compilar. Ejemplo:<br>
      ```
      javac SistemaRegistroEstudiantes.java
      ```
