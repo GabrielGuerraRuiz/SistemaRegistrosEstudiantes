@@ -46,6 +46,28 @@ public class SistemaRegistroEstudiantes {
 ```
 
 # Instrucciones para compilar y ejecutar el programa
+Para compilar el programa, utiliza el siguiente comando:
+
+ **Compilar**:
+   - Usa el comando `javac` para compilar. Ejemplo:
+     ```
+     javac SistemaRegistroEstudiantes.java
+     ```
+   - Esto generará un archivo `SistemaRegistroEstudiantes.class` en el mismo directorio si el código no tiene errores.
+
+ **Ejecutar**:
+   - Una vez compilado, ejecuta el archivo `.class` con el comando `java` (sin la extensión `.class`):
+     ```
+     java SistemaRegistroEstudiante
+     ```
+ ### Ejemplo Básico de Código Java
+
+```java
+public class MiPrograma {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, mundo!");
+    }
+}
 
 
 # Capturas de pantalla del programa en funcionamiento
