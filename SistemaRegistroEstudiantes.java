@@ -8,6 +8,17 @@ class Estudiante {
 }
 
 public class SistemaRegistroEstudiantes {
+
+    public static void mostrarEstudiantes(Estudiante[] estudiantes) {
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println("Nombre: " + estudiante.nombre);
+            System.out.println("Edad: " + estudiante.edad);
+            System.out.println("Matrícula: " + estudiante.matricula);
+            System.out.println("Carrera: " + estudiante.carrera);
+            System.out.println("--------------------------");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Estudiante[] estudiantes = new Estudiante[100];
@@ -31,7 +42,7 @@ public class SistemaRegistroEstudiantes {
                     break;
 
                 case 2:
-                    // Mostrar estudiantes
+                    mostrarEstudiantes(estudiantes);
                     break;
 
                 case 3:
