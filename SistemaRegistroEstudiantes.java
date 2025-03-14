@@ -27,7 +27,25 @@ public class SistemaRegistroEstudiantes {
 
             switch (opcion) {
                 case 1:
-                    // Registrar estudiante
+
+                    if (numEstudiantes < 100) {
+                        Estudiante nuevo = new Estudiante();
+                        System.out.print("Ingrese el nombre: ");
+                        nuevo.nombre = scanner.nextLine();
+                        System.out.print("Ingrese la edad: ");
+                        nuevo.edad = scanner.nextInt();
+                        scanner.nextLine(); // Limpiar el buffer
+                        System.out.print("Ingrese la matrícula: ");
+                        nuevo.matricula = scanner.nextLine();
+                        System.out.print("Ingrese la carrera: ");
+                        nuevo.carrera = scanner.nextLine();
+
+                        estudiantes[numEstudiantes] = nuevo;
+                        numEstudiantes++;
+                        System.out.println("Estudiante registrado exitosamente.");
+                    } else {
+                        System.out.println("No se pueden registrar más estudiantes.");
+                    }
                     break;
 
                 case 2:
