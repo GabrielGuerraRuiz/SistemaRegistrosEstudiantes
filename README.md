@@ -33,6 +33,7 @@ System.out.println("\n--- Sistema de Registro de Estudiantes ---");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el buffer
 ```
+## **Estructura del Código y Explicación**
 
 ### **Clase `Estudiante`**
 ```java
@@ -84,21 +85,44 @@ public static int eliminarEstudiante(Estudiante[] estudiantes, int numEstudiante
 ```
 Este método busca a un estudiante por su matrícula y lo elimina del arreglo, reorganizando los elementos restantes para mantener la integridad de la lista.
 
+### **Método `registrarEstudiante`**
+```java
+if (numEstudiantes < 100) {
+    Estudiante nuevo = new Estudiante();
+    System.out.print("Ingrese el nombre: ");
+    nuevo.nombre = scanner.nextLine();
+    System.out.print("Ingrese la edad: ");
+    nuevo.edad = scanner.nextInt();
+    scanner.nextLine(); // Limpiar el buffer
+    System.out.print("Ingrese la matrícula: ");
+    nuevo.matricula = scanner.nextLine();
+    System.out.print("Ingrese la carrera: ");
+    nuevo.carrera = scanner.nextLine();
+
+    estudiantes[numEstudiantes] = nuevo;
+    numEstudiantes++;
+    System.out.println("Estudiante registrado exitosamente.");
+} else {
+    System.out.println("No se pueden registrar más estudiantes.");
+}
+```
+Este bloque de código permite registrar nuevos estudiantes en el sistema, asegurando que no se supere el límite de 100 registros.
+
 ### **Búsqueda de Estudiante por Matrícula**
 ```java
 System.out.print("Ingrese la matrícula del estudiante: ");
 matricula = scanner.nextLine();
-boolean encontrado = false;
+int encontrado = 0;
 for (int i = 0; i < numEstudiantes; i++) {
     if (estudiantes[i] != null && estudiantes[i].matricula.equals(matricula)) {
         System.out.println("Nombre: " + estudiantes[i].nombre);
         System.out.println("Edad: " + estudiantes[i].edad);
         System.out.println("Carrera: " + estudiantes[i].carrera);
-        encontrado = true;
+        encontrado = 1;
         break;
     }
 }
-if (!encontrado) {
+if (encontrado == 0) {
     System.out.println("No se encontró ningún estudiante con esa matrícula.");
 }
 ```
@@ -108,13 +132,6 @@ En este bloque de código:
 3. Se compara la matrícula ingresada con las matrículas almacenadas.
 4. Si hay coincidencia, se muestran los datos del estudiante.
 5. Si no se encuentra, se notifica al usuario.
-
-Este código permite gestionar registros de estudiantes de manera eficiente dentro del sistema.
-
-
-
-
-
 
 
 # Instrucciones para compilar y ejecutar el programa
