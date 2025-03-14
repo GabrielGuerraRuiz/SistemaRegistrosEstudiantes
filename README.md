@@ -2,6 +2,9 @@
 ## Indice
 1. [Descripción del proyecto](#descripcion_del_proyecto)
 2. 
+3. [Instrucciones para compilar y ejecutar el programa](#instrucciones_para_compilar_y_ejecutar_el_programa)
+4. [Capturas de pantalla del programa en funcionamiento](#captura_de_pantalla_del_programa_en_funcionamiento)
+5. [Enlace al repositorio de GitHub](#enlace_al_repositorio_de_github)
 
 
 
@@ -9,7 +12,7 @@
 Este proyecto consiste en el desarrollo de un programa en Java para la gestión de registros de estudiantes, permitiendo registrar, buscar, listar y eliminar estudiantes mediante una interfaz de línea de comandos.<br> Cada estudiante es identificado por su nombre, edad, matrícula y carrera.<br>
 La práctica reforzará conocimientos en estructuras de control, manejo de arreglos y uso de la clase `Scanner` para la entrada de datos.
 
-## **Funcionalidades**
+### **Funcionalidades**
 1. Registrar nuevos estudiantes.
 2. Mostrar la lista de estudiantes registrados.
 3. Buscar un estudiante por matrícula.
@@ -31,6 +34,7 @@ System.out.println("\n--- Sistema de Registro de Estudiantes ---");
             scanner.nextLine(); // Limpiar el buffer
 ```
 
+Este código define un arreglo para almacenar hasta 100 estudiantes, las variables para contar el número de estudiantes `numEstudiantes` y para capturar datos como nombre, matrícula y carrera. Se usa un `Scanner` para leer datos del usuario en la consola.
 
 ```sh
 public class SistemaRegistroEstudiantes {
