@@ -3,8 +3,8 @@
 1. [Descripción del proyecto](#descripcion_del_proyecto)
 2. [Desarrollo](#desarrollo)
 3. [Instrucciones para compilar y ejecutar el programa](#instrucciones_para_compilar_y_ejecutar_el_programa)
-4. [Capturas de pantalla del programa en funcionamiento](#captura_de_pantalla_del_programa_en_funcionamiento)
-5. [Enlace al repositorio de GitHub](#enlace_al_repositorio_de_github)
+4. [Capturas de pantalla del programa en funcionamiento](#capturas_de_pantalla_del_programa_en_funcionamiento)
+5. [Enlace al repositorio de GitHub](#enlace_al_repositorio_de_GitHub)
 
 
 
