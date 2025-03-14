@@ -50,6 +50,6 @@ public class SistemaRegistroEstudiantes {
 
 # Capturas de pantalla del programa en funcionamiento
 
-
+https://github.com/GabrielGuerraRuiz/SistemaRegistrosEstudiantes/issues
 # Enlace al repositorio de GitHub 
 
