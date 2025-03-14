@@ -9,16 +9,12 @@ class Estudiante {
 
 public class SistemaRegistroEstudiantes {
 
-    public static void mostrarEstudiantes(Estudiante[] estudiantes, int numEstudiantes) {
-        if (numEstudiantes == 0) {
-            System.out.println("No hay estudiantes registrados.");
-            return;
-        }
-        for (int i = 0; i < numEstudiantes; i++) {
-            System.out.println("Nombre: " + estudiantes[i].nombre);
-            System.out.println("Edad: " + estudiantes[i].edad);
-            System.out.println("Matrícula: " + estudiantes[i].matricula);
-            System.out.println("Carrera: " + estudiantes[i].carrera);
+    public static void mostrarEstudiantes(Estudiante[] estudiantes) {
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println("Nombre: " + estudiante.nombre);
+            System.out.println("Edad: " + estudiante.edad);
+            System.out.println("Matrícula: " + estudiante.matricula);
+            System.out.println("Carrera: " + estudiante.carrera);
             System.out.println("--------------------------");
         }
     }
@@ -41,7 +37,7 @@ public class SistemaRegistroEstudiantes {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Estudiante[] estudiantes = new Estudiante[100];
-        int numEstudiantes = 0, opcion;
+        int numEstudiantes=0, opcion, encontrado;
         String nombre, matricula, carrera;
 
         do {
@@ -57,45 +53,29 @@ public class SistemaRegistroEstudiantes {
 
             switch (opcion) {
                 case 1:
-                    if (numEstudiantes < 100) {
-                        Estudiante nuevo = new Estudiante();
-                        System.out.print("Ingrese el nombre: ");
-                        nuevo.nombre = scanner.nextLine();
-                        System.out.print("Ingrese la edad: ");
-                        nuevo.edad = scanner.nextInt();
-                        scanner.nextLine(); // Limpiar el buffer
-                        System.out.print("Ingrese la matrícula: ");
-                        nuevo.matricula = scanner.nextLine();
-                        System.out.print("Ingrese la carrera: ");
-                        nuevo.carrera = scanner.nextLine();
-
-                        estudiantes[numEstudiantes] = nuevo;
-                        numEstudiantes++;
-                        System.out.println("Estudiante registrado exitosamente.");
-                    } else {
-                        System.out.println("No se pueden registrar más estudiantes.");
-                    }
+                    // Registrar estudiante
                     break;
 
                 case 2:
-                    mostrarEstudiantes(estudiantes, numEstudiantes);
+                    mostrarEstudiantes(estudiantes);
                     break;
 
                 case 3:
-                    System.out.print("Ingrese la matrícula del estudiante: ");
+                    // Buscar estudiante por matrícula
+                    System.out.print("Ingrese la matricula del estudiante: ");
                     matricula = scanner.nextLine();
-                    boolean encontrado = false;
-                    for (int i = 0; i < numEstudiantes; i++) {
+                    encontrado=0;
+                    for (int i=0; i<numEstudiantes; i++) {
                         if (estudiantes[i].matricula.equals(matricula)) {
                             System.out.println("Nombre: " + estudiantes[i].nombre);
                             System.out.println("Edad: " + estudiantes[i].edad);
                             System.out.println("Carrera: " + estudiantes[i].carrera);
-                            encontrado = true;
+                            encontrado=1;
                             break;
                         }
                     }
-                    if (!encontrado) {
-                        System.out.println("No se encontró ningún estudiante con esa matrícula.");
+                    if (encontrado==0) {
+                        System.out.println("No se encontro ningun estudiante con esa matricula.");
                     }
                     break;
 
@@ -106,11 +86,11 @@ public class SistemaRegistroEstudiantes {
                     break;
 
                 case 0:
-                    System.out.println("Saliendo del sistema...");
+                    // Salir
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    System.out.println("Opcion no valida.");
             }
         } while (opcion != 0);
 
